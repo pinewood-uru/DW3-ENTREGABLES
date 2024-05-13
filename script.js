@@ -1,6 +1,7 @@
 // HTML
 
 let ctnejercicios = document.getElementById("ctn-ejercicios");
+let nav = document.getElementById("nav");
 
 const ejercicios = [
     {
@@ -48,7 +49,7 @@ const ejercicios = [
     ];
 
 ejercicios.forEach((ejercicio) => {
-    console.log(ejercicio);
+    
     let formatocontenedor = `
     <div class="card" style="width: 18rem;">
   <img src="${ejercicio.img}" class="card-img-top" alt="">
@@ -60,5 +61,12 @@ ejercicios.forEach((ejercicio) => {
 </div>`
 
 ctnejercicios.innerHTML += formatocontenedor;
+
+ejercicios.forEach((ejercicio) => {
+    let navFormato = `
+    <a class="nav-link" href="${ejercicio.url}">${ejercicio.nombre}</a>
+    `
+    nav.innerHTML += navFormato
+});
 
 })
