@@ -51,7 +51,7 @@ const ejercicios = [
 ejercicios.forEach((ejercicio) => {
     
     let formatocontenedor = `
-    <div class="card" style="width: 18rem;">
+    <div class="card border border-1 border-primary" style="width: 18rem;">
   <img src="${ejercicio.img}" class="card-img-top" alt="">
   <div class="card-body">
     <h5 class="card-title">${ejercicio.nombre}</h5>
@@ -62,11 +62,13 @@ ejercicios.forEach((ejercicio) => {
 
 ctnejercicios.innerHTML += formatocontenedor;
 
+
+})
+
+
 ejercicios.forEach((ejercicio) => {
     let navFormato = `
     <a class="nav-link" href="${ejercicio.url}">${ejercicio.nombre}</a>
     `
     nav.innerHTML += navFormato
 });
-
-})

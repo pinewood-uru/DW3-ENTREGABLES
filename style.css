@@ -1,3 +1,9 @@
+/* FONT */
+*{
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+}
+
 #ctn-ejercicios{
     width: 80%;
     margin: 0 auto;
